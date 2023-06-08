@@ -102,14 +102,17 @@ function drawCard() {
 
         // First Name
         ctx.textAlign = 'center'
-        ctx.fillStyle = '#777a85';
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
         ctx.font = '16px Renogare';
         ctx.fillText(value('firstName'), 130, 281);
+        if (checked('maxed')) ctx.fillStyle = '#FFFFFF';
 
         // Last Name
         ctx.fillStyle = '#ffffff';
+        ctx.font = '#000000';
         ctx.font = '25px Renogare';
         ctx.fillText(value('lastName'), 130, value('firstName') == '' ? 299 : 305);
+        if (checked('maxed')) ctx.fillStyle = '#FFFFFF';;
 
         // Stats
         ctx.font = '20px Renogare';
