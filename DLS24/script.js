@@ -101,18 +101,20 @@ function drawCard() {
         if (checked('maxed')) ctx.drawImage(images.starImage, 178, 0);
 
         // First Name
-        ctx.textAlign = 'center'
+        ctx.textAlign = 'center';
         ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
         ctx.font = '16px Renogare';
         ctx.fillText(value('firstName'), 130, 281);
-        if (checked('maxed')) ctx.fillStyle = '#FFFFFF';
+        if (checked('legendary') && checked('maxed'))  
+        ctx.fillStyle = '#FFFFFF';
+
 
         // Last Name
         ctx.fillStyle = '#ffffff';
-        ctx.font = '#000000';
         ctx.font = '25px Renogare';
-        ctx.fillText(value('lastName'), 130, value('firstName') == '' ? 299 : 305);
-        if (checked('maxed')) ctx.fillStyle = '#FFFFFF';;
+        ctx.fillText(value('lastName'), 130, value('firstName') === '' ? 299 : 305);
+        if (checked('legendary') && checked('maxed')) 
+        ctx.fillStyle = '#FFFFFF';
 
         // Stats
         ctx.font = '20px Renogare';
