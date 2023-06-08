@@ -111,7 +111,7 @@ function drawCard() {
         // Last Name
         ctx.fillStyle = '#ffffff';
         ctx.font = boldText + '25px Renogare';
-        ctx.fillText(value('lastName'), 130, value('firstName') === '' ? 299 : 305);
+        ctx.fillText(value('lastName'), 130, value('firstName') == '' ? 299 : 305);
         if (checked('legendary') && checked('maxed')) ctx.fillStyle = '#FFFFFF';
 
         // Stats
