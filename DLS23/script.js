@@ -81,7 +81,7 @@ function drawCard() {
         sources.playerImage = URL.createObjectURL(document.getElementById('uploadImage').files[0]);
     }
 
-    /**
+    
     if (checked('maxed')) {
         if (value('rating') > 0 && value('rating') <= 59) {
             sources.starImage = './assets/card/maxed/star/red.png'
@@ -95,7 +95,6 @@ function drawCard() {
             sources.starImage = './assets/card/maxed/star/blue.png'
         }
     }
-    */
 
     loadImages(sources, function (images) {
         ctx.drawImage(images.template, 0, 0);
