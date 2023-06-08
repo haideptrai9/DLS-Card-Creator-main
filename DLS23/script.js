@@ -102,7 +102,7 @@ function drawCard() {
         ctx.drawImage(images.playerImage, 18, 37, 224, 224);
         ctx.drawImage(images.positionImage, 202, 91);
         ctx.drawImage(images.flagImage, 202, 127, 46, 29);
-        // if (checked('maxed')) ctx.drawImage(images.starImage, 178, 0);
+        if (checked('maxed')) ctx.drawImage(images.starImage, 178, 0);
 
         // First Name
         ctx.textAlign = 'center'
@@ -145,7 +145,7 @@ function drawCard() {
         }
 
         // Rating Circle
-        // if (!checked('maxed')) {
+        if (!checked('maxed')) {
         ctx.beginPath();
         ctx.arc(222, 45, 31, 0, 2 * Math.PI);
         if (value('rating') > 0 && value('rating') <= 59) {
@@ -160,7 +160,7 @@ function drawCard() {
             ctx.fillStyle = '#5797d1';
         }
         ctx.fill();
-        // }
+        }
 
         // Rating
         ctx.fillStyle = '#ffffff';
@@ -170,7 +170,7 @@ function drawCard() {
 
         // Height
         ctx.textAlign = 'left'
-        ctx.fillStyle = /**checked('maxed')**/false && value('cardType') == 'legendary' ? '#ffffff' : '#000000';
+        ctx.fillStyle = checked('maxed')false && value('cardType') == 'legendary' ? '#ffffff' : '#000000';
         ctx.font = boldText + '22px Renogare';
         ctx.letterSpacing = '0px';
         ctx.fillText(value('height'), 303, 59);
